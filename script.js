@@ -17,13 +17,6 @@ var weatherTemp= $(`#weather-temp`)
 var weatherWind= $(`#weather-wind`)
 var weatherHumidity= $(`#weather-humidity`)
 
-// forecast area
-var forecastImage= $(`#forecast-image`)
-var forecastHeader = $(`#forecast-header`)
-var forecastDescription = $(`#forecast-description`)
-var forecastTemp= $(`#forecast-temp`)
-var forecastWind= $(`#forecast-wind`)
-var forecastHumidity= $(`#forecast-humidity`)
 
 
 
@@ -37,21 +30,33 @@ var formButton= $(`#form-btns`)
 
 // main weather area
 .text();
-.text();
-.text();
-.text();
-.text();
-.text();
+weatherHeader.text(`eat my shorts`);
+weatherDescription.text(`i like pie`);
+weatherTemp.text(`i like pie`);
+weatherWind.text(`i like pie`);
+weatherHumidity.text(`i like pie`);
 
+var apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`;
 
+for (let i = 0; i < 5; i++) { 
+  idValue = i + 1
+  // forecast area
+  var forecastImage= $(`#forecast${idValue}-image`)
+  var forecastHeader = $(`#forecast${idValue}-header`)
+  var forecastDescription = $(`#forecast${idValue}-description`)
+  var forecastTemp= $(`#forecast${idValue}-temp`)
+  var forecastWind= $(`#forecast${idValue}-wind`)
+  var forecastHumidity= $(`#forecast${idValue}-humidity`)
+  // forecast area
+  // .text();
+  forecastHeader.text(`bland farts dont rise`);
+  forecastDescription.text(`bland farts dont rise`);
+  forecastTemp.text(`bland farts dont rise`);
+  forecastWind.text(`bland farts dont rise`);
+  forecastHumidity.text(`bland farts dont rise`);
 
-// forecast area
-.text();
-.text();
-.text();
-.text();
-.text();
-.text();
+  console.log(i)
+}
 
 
 
