@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={f29b9f270fed128887a47a732c1b399a
-}">
+    
 </head>
 
 <body>
@@ -29,7 +28,7 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="dropdown-container">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -40,9 +39,9 @@
                 <a class="nav-link disabled">Disabled</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" id="root" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" id="cats" type="submit">City Search</button>
+            <form class="d-flex" id="location-form" role="search">
+              <input class="form-control me-2" id="form-input" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" id="form-btns" type="submit">City Search</button>
             </form>
           </div>
         </div>
@@ -50,25 +49,28 @@
       <main class="container text-center">
         <section class="row">
           <div class="card col text-bg-dark">
-            <!-- <img src="..." class="card-img" alt="..."> -->
+            <!-- <img src="..." class="card-img" id="weather-image" alt="..."> -->
             <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
+              <h5 class="card-title" id="weather-header"></h5>
+              <p class="card-text" id="weather-description"></p>
+              <p class="card-text" id="weather-temp"><small>Last updated 3 mins ago</small></p>
+              <p class="card-text" id="weather-wind"></p>
+              <p class="card-text" id="weather-humidity"></p>
+
             </div>
           </div>
         </section>
         <section class="row card-group">
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <!-- <img src="..." class="card-img-top" id="forecast1-icon" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 id="forecast1-header" ></h5>
+            <p class="card-text" id="forecast1-description"></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item" id="forecast1-temp"></li>
+            <li class="list-group-item" id="forecast1-wind"></li>
+            <li class="list-group-item" id="forecast1-humidity"></li>
           </ul>
           <div class="card-body">
             <a href="#" class="card-link">Card link</a>
@@ -76,15 +78,15 @@
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <!-- <img src="..." class="card-img-top" id="forecast2-icon" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 id="forecast2-header"></h5>
+            <p class="card-text" id="forecast2-description"></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item" id="forecast2-temp"></li>
+            <li class="list-group-item" id="forecast2-wind"></li>
+            <li class="list-group-item" id="forecast2-humidity"></li>
           </ul>
           <div class="card-body">
             <a href="#" class="card-link">Card link</a>
@@ -92,15 +94,15 @@
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <!-- <img src="..." class="card-img-top" id="forecast3-icon" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 id="forecast3-header"></h5>
+            <p class="card-text" id="forecast3-description"></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item" id="forecast3-temp"></li>
+            <li class="list-group-item" id="forecast3-wind"></li>
+            <li class="list-group-item" id="forecast3-humidity"></li>
           </ul>
           <div class="card-body">
             <a href="#" class="card-link">Card link</a>
@@ -108,15 +110,15 @@
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <!-- <img src="..." class="card-img-top" id="forecast4-icon" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 id="forecast4-header"></h5>
+            <p class="card-text" id="forecast4-description"></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item" id="forecast4-temp"></li>
+            <li class="list-group-item" id="forecast4-wind"></li>
+            <li class="list-group-item" id="forecast4-humidity"></li>
           </ul>
           <div class="card-body">
             <a href="#" class="card-link">Card link</a>
@@ -124,15 +126,15 @@
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <!-- <img src="..." class="card-img-top" id="forecast5-icon" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 id="forecast5-header"></h5>
+            <p class="card-text" id="forecast5-description"></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item" id="forecast5-temp"></li>
+            <li class="list-group-item" id="forecast5-wind"></li>
+            <li class="list-group-item" id="forecast5-humidity"></li>
           </ul>
           <div class="card-body">
             <a href="#" class="card-link">Card link</a>
@@ -142,6 +144,7 @@
       </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -1,64 +1,57 @@
-var APIKey = "5bdf324775e0896ec3053c8ff5073cc3";
-var locationInput = $('#root').value;
-var locationButtonEl = $('#cats')
-var locationListOl = [];
-// Create a for loop that appends weather to apropriate areas
-
-// Create a way to append forcast to the proper area
-
-// Create a way to save to local storage
-
-// Create a way to add old saved locations to the page
-
-// Create 
-// Create 
-getWeather: () => {
-var apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput}&appid=${APIKey}`;
-fetch(apiURL)
-.then(function (response) {
-    if (response.ok) {
-      response.json().then(function (data) {
-        displayData(data, city);
-      });
-    } else {
-      alert('Error: ' + response.statusText);
-    }
-  })
-  .catch(function (error) {
-    alert('Unable to connect to current weather API.');
-  });
-}
+var APIKey = "cbf81724fcd599755422dc8888dab750";
 
 
-getForcast: ()=>{
-    var forecastApiUrl = (`http://api.openweathermap.org/data/2.5/forecast?p=${locationInput}&appid=${APIKey}`)
+// create connections to html for placing text
 
-    fetch(forecastApiUrl)
-    .then(function (response) {
-      if (response.ok) {
-        response.json().then(function (data) {
-          displayForecast(data);
-        });
-      } else {
-        alert('Error: ' + response.statusText);
-      }
-    })
-    .catch(function (error) {
-      alert('Unable to connect to forecast API.');
-    });
-  }
+// select the dropdown area
+var dropDownUL= $(`#dropdown-container`)
+
+
+// grab all locations
+
+// main weather area
+var weatherImage= $(`#weather-image`)
+var weatherHeader = $(`#weather-header`)
+var weatherDescription = $(`#weather-description`)
+var weatherTemp= $(`#weather-temp`)
+var weatherWind= $(`#weather-wind`)
+var weatherHumidity= $(`#weather-humidity`)
+
+// forecast area
+var forecastImage= $(`#forecast-image`)
+var forecastHeader = $(`#forecast-header`)
+var forecastDescription = $(`#forecast-description`)
+var forecastTemp= $(`#forecast-temp`)
+var forecastWind= $(`#forecast-wind`)
+var forecastHumidity= $(`#forecast-humidity`)
 
 
 
+// select the form for inputs
+var formArea= $(`#location-form`)
+var formInput= $(`#form-input`)
+var formButton= $(`#form-btns`)
 
-locationButtonEl.addEventListener('click', function (event) {
-    event.preventDefault();
-    console.log(event);
-    console.log(locationInput)
-    console.log(weatherLocation)
-    console.log(apiURL)
 
-});
+// create text to fill those areas
+
+// main weather area
+.text();
+.text();
+.text();
+.text();
+.text();
+.text();
+
+
+
+// forecast area
+.text();
+.text();
+.text();
+.text();
+.text();
+.text();
 
 
 
@@ -67,34 +60,14 @@ locationButtonEl.addEventListener('click', function (event) {
 
 
 
+// grab api data
 
+// isolate api data
 
+// use api data in creation of weather functions
 
+// use api data in creation of forecast functions
 
+// create a way to store past searches and their weather data
 
-
-// Comments show the vanilla JavaScript equivalent statements
-
-// var rootEl = document.getElementById("root");
-var rootEl = $('#root');
-
-// var titleEl = document.createElement("h1");
-var titleEl = $('<h1>');
-
-// titleEl.textContent = "Hello friends";
-titleEl.text('Hello friends');
-
-// titleEl.className = 'fancy';
-titleEl.attr('class', 'fancy');
-
-// titleEl.classList.add('p-5') - (`p-5` is for padding)
-titleEl.addClass('p-5');
-
-// titleEl.style.border = "rgb(122, 242, 242) 3px solid";
-titleEl.css('border', 'rgb(122, 242, 242) 5px solid');
-
-// rootEl.appendChild(titleEl);
-rootEl.append(titleEl);
-
-// titleEl.append("Welcome to jQuery");
-rootEl.append('<h2>With jQuery we can:</h2>');
+// create a way to get the local storage and turn it into a "button"
