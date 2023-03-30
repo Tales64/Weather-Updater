@@ -26,13 +26,10 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Recent Cities
                 </a>
                 <ul class="dropdown-menu" id="dropdown-container">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                
                 </ul>
               </li>
               <li class="nav-item">
@@ -40,7 +37,7 @@
               </li>
             </ul>
             <form class="d-flex" id="location-form" role="search">
-              <input class="form-control me-2" id="form-input" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control me-2" id="form-input" type="text" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" id="form-btns" type="submit">City Search</button>
             </form>
           </div>
@@ -49,8 +46,9 @@
       <main class="container text-center">
         <section class="row">
           <div class="card col text-bg-dark">
-            <img src="https://media.istockphoto.com/id/172241152/photo/view-of-pittsburgh-pennsylvania-skyline-during-the-day.jpg?s=2048x2048&w=is&k=20&c=5qnvx-3gwIZ9q2xt0djuf5uoHmO6xWQtWMETrtBJPL4=" class="card-img" id="weather-image" alt="...">
+            <img src="https://as2.ftcdn.net/v2/jpg/02/66/38/15/1000_F_266381525_alVrbw15u5EjhIpoqqa1eI5ghSf7hpz7.jpg" class="card-img" id="city-image" alt="...">
             <div class="card-img-overlay">
+              <img src="" class="card-img" id="weather-image" alt="...">
               <h5 class="card-title" id="weather-header"></h5>
               <p class="card-text" id="weather-description"></p>
               <p class="card-text" id="weather-temp"><small>Last updated 3 mins ago</small></p>
@@ -62,9 +60,12 @@
         </section>
         <section class="row card-group">
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" id="forecast1-icon" alt="..."> -->
+          <img src="" class="card-img-top"  alt="...">
+          <div id="forecast1-icon">
+
+          </div>
           <div class="card-body">
-            <h5 id="forecast1-header" ></h5>
+            <h5 id="forecast1-header"></h5>
             <p class="card-text" id="forecast1-description"></p>
           </div>
           <ul class="list-group list-group-flush">
@@ -73,12 +74,10 @@
             <li class="list-group-item" id="forecast1-humidity"></li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" id="forecast2-icon" alt="..."> -->
+          <img src="" class="card-img-top" id="forecast2-icon" alt="...">
           <div class="card-body">
             <h5 id="forecast2-header"></h5>
             <p class="card-text" id="forecast2-description"></p>
@@ -89,12 +88,10 @@
             <li class="list-group-item" id="forecast2-humidity"></li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" id="forecast3-icon" alt="..."> -->
+          <img src="" class="card-img-top" id="forecast3-icon" alt="...">
           <div class="card-body">
             <h5 id="forecast3-header"></h5>
             <p class="card-text" id="forecast3-description"></p>
@@ -105,12 +102,10 @@
             <li class="list-group-item" id="forecast3-humidity"></li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" id="forecast4-icon" alt="..."> -->
+          <img src="" class="card-img-top" id="forecast4-icon" alt="...">
           <div class="card-body">
             <h5 id="forecast4-header"></h5>
             <p class="card-text" id="forecast4-description"></p>
@@ -121,12 +116,10 @@
             <li class="list-group-item" id="forecast4-humidity"></li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
         <div class="card col" style="width: 18rem;">
-          <!-- <img src="..." class="card-img-top" id="forecast5-icon" alt="..."> -->
+          <img src="" class="card-img-top" id="forecast5-icon" alt="...">
           <div class="card-body">
             <h5 id="forecast5-header"></h5>
             <p class="card-text" id="forecast5-description"></p>
@@ -137,8 +130,6 @@
             <li class="list-group-item" id="forecast5-humidity"></li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
       </section>
