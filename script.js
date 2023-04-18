@@ -122,7 +122,7 @@ var getWeather = (city) => {
 
 var getForecast = (city) => {
   // cityImage.attr( `src`, `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${city}&key=${GOOGLEKEY}`);
-  var forecastApiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
+  var forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
   
   fetch(forecastApiUrl)
   .then(function (response) {
