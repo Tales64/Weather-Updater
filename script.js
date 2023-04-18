@@ -167,7 +167,7 @@ var buttonClick = (event) => {
     console.log(cityName);
   weatherImage.attr(
     `src`,
-    `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+    `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`
     );
     console.log(cityName.value);
   // weatherIcon.classList.remove("hidden");
